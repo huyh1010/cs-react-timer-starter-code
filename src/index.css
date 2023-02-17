@@ -119,7 +119,7 @@ p {
   background-position: 98px 0;
 }
 .button:disabled {
-  background-color: rgb(170, 164, 164);
+  background: -webkit-linear-gradient(0deg, transparent 0%, red);
 }
 /* .button.active {
   border: 1px solid var(--text-main-color);

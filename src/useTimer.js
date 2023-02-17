@@ -9,13 +9,13 @@ const useTimer = (ini = 0) => {
   const refInterval = useRef(null);
 
   const startTimer = () => {
+    active.current.disabled = true;
     isStart.current = true;
     refInterval.current = setInterval(() => {
       if (isStart.current) {
         setTime((time) => time + 1);
       }
     }, 1000);
-    active.current.disabled = true;
   };
   const stopTimer = () => {
     isStart.current = false;
