@@ -5,12 +5,10 @@ export const formatTime = (time) => {
   const getHours = `0${Math.floor(time / 3600)}`.slice(-2);
 
   return (
-    <div>
-      <div className="time-card-wrapper">
-        <div className="time-card time-hours">{getHours}</div>
-        <div className="time-card time-minutes">{getMinutes}</div>
-        <div className="time-card time-seconds">{getSeconds}</div>
-      </div>
+    <div className="time-card-wrapper">
+      <div className="time-card time-hours">{getHours}</div>
+      <div className="time-card time-minutes">{getMinutes}</div>
+      <div className="time-card time-seconds">{getSeconds}</div>
     </div>
   );
 
