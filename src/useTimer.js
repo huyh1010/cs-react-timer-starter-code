@@ -26,10 +26,11 @@ const useTimer = (ini = 0) => {
     clearInterval(refInterval.current);
     setTime(0);
     active.current.disabled = false;
+    setTimeList([]);
   };
 
-  const splitTimer = (timeList) => {
-    timeList.append(time);
+  const splitTimer = () => {
+    timeList.push(time);
     setTimeList([...timeList]);
   };
 

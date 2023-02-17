@@ -4,5 +4,15 @@ export const formatTime = (time) => {
   const getMinutes = `0${minutes % 60}`.slice(-2);
   const getHours = `0${Math.floor(time / 3600)}`.slice(-2);
 
-  return `${getHours} : ${getMinutes} : ${getSeconds}`;
+  return (
+    <div>
+      <div className="time-card-wrapper">
+        <div className="time-card time-hours">{getHours}</div>
+        <div className="time-card time-minutes">{getMinutes}</div>
+        <div className="time-card time-seconds">{getSeconds}</div>
+      </div>
+    </div>
+  );
+
+  // `${getHours} : ${getMinutes} : ${getSeconds}`;
 };

@@ -17,26 +17,33 @@ function App() {
 
   return (
     <div className="App container">
-      <h1>Coder Timer</h1>
+      <h1>TIMER</h1>
       <div className="timer__wrapper">
         <div className="timer__display">
           <p>{formatTime(time)}</p>
-          <LapList timeList={timeList} />
         </div>
-        <div className="button__wrapper">
-          <button className="button" onClick={stopTimer}>
-            Stop
-          </button>
-          <button className="button" ref={active} onClick={startTimer}>
-            Start
-          </button>
-          <button className="button" onClick={resetTimer}>
-            Reset
-          </button>
-          <button className="button" onClick={() => splitTimer(timeList)}>
-            Split
-          </button>
+        <div className="time-units">
+          <div className="unit unit-hours">HOURS</div>
+          <div className="unit unit-minutes">MINUTES</div>
+          <div className="unit unit-seconds">SECONDS</div>
         </div>
+      </div>
+      <div className="button__wrapper">
+        <button className="button" onClick={stopTimer}>
+          Stop
+        </button>
+        <button className="button" ref={active} onClick={startTimer}>
+          Start
+        </button>
+        <button className="button" onClick={resetTimer}>
+          Reset
+        </button>
+        <button className="button" onClick={splitTimer}>
+          Split
+        </button>
+      </div>
+      <div className="laplist">
+        <LapList timeList={timeList} />
       </div>
     </div>
   );
